@@ -396,9 +396,9 @@ $(document).ready(function() {
 	$(document).on('click', '#btn-enter', function() {
 		var birthDate = $("#birth-date").val();
 		birthDate=birthDate.split(".", 2);
-		var month = birthDate[1]	
-		var day = birthDate[0]
-
+		var month = birthDate[1];
+		var day = birthDate[0];
+		month = parseInt(month, 10)-1;
 		$('#birthday-table').empty();
 		$('#birthday-table').append($("<tr />") 
 			.append($('<td />').text("Name"))
