@@ -1,0 +1,12 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+.tbl-datepick {
+    border: 1px solid black;
+}
+
+th {
+    text-align: center;
+}

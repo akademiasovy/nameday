@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Namedays</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h1>Nameday</h1>
+    </div>
+    <div>
+        <div id="datepick">
+            <table class="tbl-datepick">
+                <tr>
+                    <th>Month: </th>
+                    <td><input type="number" id="chosenMonth"></td>
+                </tr>
+                <tr>
+                    <th>Day: </th>
+                    <td><input type="number" id="chosenDay"></td>
+                </tr>
+                <tr>
+                    <th colspan="2">
+                        <button id="btn-ok"> Find out! </button>
+                    </th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="cont-result">
+        <div id="result"></div>
+    </div>
+</body>
+</html>
