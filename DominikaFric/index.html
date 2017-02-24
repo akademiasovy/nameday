@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calendar</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="data.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		$('#date').datepicker({
+            format: "d.m.yyyy"
+        });
+		$("#date").on("change",function(){
+			var date= $(this).val();
+			$("#chosenDay").html(date);
+			date= date.split(".");
+
+			var names= objNameday[date[1]-1][date[0]];
+			$("#nameday").html(names);
+		});
+
+	});
+	</script>
+</head>
+<body>
+<div class="container w3-container w3-card-8">
+<h1>Who celebrates today?</h1>
+<div class="inputs">
+	<h3>Choose date:</h3> <input type="text" id="date">
+</div>
+<h3 id="chosenDay"></h3>
+<div id="nameday">
+</div>
+<h2>Happy nameday!</h2>
+	
+</div>
+
+</body>
+
+
+</html>
